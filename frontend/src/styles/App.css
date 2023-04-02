@@ -86,7 +86,7 @@ body, html{
 }
 
 ul li{
-  color: #AAAAAA;
+  color: #010000;
   display: block;
   position: relative;
   float: left;
@@ -111,10 +111,11 @@ ul li label{
   z-index: 9;
   cursor: pointer;
   
+  
 }
 
 ul li:hover label{
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 ul li .check{
@@ -132,7 +133,7 @@ ul li .check{
 }
 
 ul li:hover .checked {
-  border: 5px solid #FFFFFF;
+  border: 5px solid #ffffff;
 }
 
 ul li .check::before {

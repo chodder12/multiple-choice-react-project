@@ -16,7 +16,10 @@ export default function Main() {
 
         <ol>
             <li>you will be asked several multiple choice question</li>
+            <li>choose one answer per question</li>
+            <li>you can go back at any time</li>
             <li>your score will be shown at the end of the game</li>
+
 
         </ol>
 

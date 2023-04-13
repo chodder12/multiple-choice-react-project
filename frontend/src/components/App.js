@@ -1,14 +1,15 @@
 import '../styles/App.css';
 
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-
+/** import components */
 import Main from './Main';
 import Quiz from './Quiz';
 import Result from './Result';
+import { CheckUserExist } from '../helper/helper';
 
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
+/** react routes */
 const router = createBrowserRouter([
   {
     path : '/',
@@ -16,20 +17,18 @@ const router = createBrowserRouter([
   },
   {
     path : '/quiz',
-    element : <Quiz></Quiz>
+    element : <CheckUserExist><Quiz /></CheckUserExist>
   },
   {
     path : '/result',
-    element : <Result></Result>
-  }
-
-]);
-
+    element : <CheckUserExist><Result /></CheckUserExist>
+  },
+])
 
 function App() {
   return (
     <>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
   );
 }

@@ -13,6 +13,7 @@ export const useFetchQestion = () => {
     useEffect(() => {
         setGetData(prev => ({...prev, isLoading : true}));
 
+        
         /** async function fetch backend data */
         (async () => {
             try {

@@ -17,6 +17,7 @@ export const questionReducer = createSlice({
                 answers
             }
         },
+        
         moveNextAction : (state) => {
             return {
                 ...state,

@@ -16,6 +16,7 @@ export default function Quiz() {
     const { queue, trace } = useSelector(state => state.questions);
     const dispatch = useDispatch()
 
+    
     /** next button event handler */
     function onNext(){
         if(trace < queue.length){

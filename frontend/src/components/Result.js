@@ -37,6 +37,7 @@ export default function Result() {
         dispatch(resetResultAction())
     }
 
+    
   return (
     <div className='container'>
         <h1 className='title text-light'>Quiz Application</h1>

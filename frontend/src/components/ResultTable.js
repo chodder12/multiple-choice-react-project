@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getServerData } from '../helper/helper'
+import Table from 'react-bootstrap/Table';
 
 export default function ResultTable() {
 
@@ -14,7 +15,7 @@ export default function ResultTable() {
     
   return (
     <div>
-        <table>
+        <table striped bordered hover>
             <thead className='table-header'>
                 <tr className='table-row'>
                     <td>Name</td>

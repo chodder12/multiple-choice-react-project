@@ -17,26 +17,26 @@ export default function Quiz() {
     const dispatch = useDispatch()
 
     
-    /** next button event handler */
+    //next button
     function onNext(){
         if(trace < queue.length){
-            /** increase the trace value by one using MoveNextAction */
+           //increase trace
             dispatch(MoveNextQuestion());
 
-            /** insert a new result in the array.  */
+            
             if(result.length <= trace){
                 dispatch(PushAnswer(check))
             }
         }
      
-        /** reset the value of the checked variable */
+        
         setChecked(undefined)
     }
 
-    /** Prev button event handler */
+    //prev button
     function onPrev(){
         if(trace > 0){
-            /** decrease the trace value by one using MovePrevQuestion */
+            //decrease trace
             dispatch(MovePrevQuestion());
         }
     }
@@ -45,7 +45,7 @@ export default function Quiz() {
         setChecked(check)
     }
 
-    /** finished exam after the last question */
+    
     if(result.length && result.length >= queue.length){
         return <Navigate to={'/result'} replace={true}></Navigate>
     }

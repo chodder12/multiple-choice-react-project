@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-/** create reducer */
+
 export const questionReducer = createSlice({
     name: 'questions',
     initialState : {

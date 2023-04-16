@@ -2,7 +2,7 @@ import Questions from "../models/questionSchema.js";
 import Results from "../models/resultSchema.js";
 import questions, { answers } from '../database/data.js'
 
-/** get all questions */
+
 export async function getQuestions(req, res){
     try {
         const q = await Questions.find();
@@ -12,7 +12,7 @@ export async function getQuestions(req, res){
     }
 }
 
-/** insert all questinos */
+
 export async function insertQuestions(req, res){
     try {
         const result = await Questions.insertMany({ questions, answers });
@@ -22,7 +22,7 @@ export async function insertQuestions(req, res){
     }
 }
 
-/** Delete all Questions */
+
 export async function dropQuestions(req, res){
    try {
         await Questions.deleteMany();
@@ -37,7 +37,7 @@ export async function dropQuestions(req, res){
 
 
 
-/** get all result */
+
 export async function getResult(req, res){
     try {
         const r = await Results.find();
@@ -47,7 +47,7 @@ export async function getResult(req, res){
     }
 }
 
-/** post all result */
+
 export async function storeResult(req, res){
     try {
          const { username, result, attempts, points, achieved } = req.body;
@@ -61,7 +61,7 @@ export async function storeResult(req, res){
     }
  }
 
-/** delete all result */
+
 export async function dropResult(req, res){
     try {
         await Results.deleteMany();

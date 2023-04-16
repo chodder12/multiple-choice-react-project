@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
 import { getServerData } from "../helper/helper";
 
-/** redux actions */
+
 import * as Action from '../redux/question_reducer'
 
-/** fetch question hook to fetch api data and set value to store */
+// fetch question
 export const useFetchQestion = () => {
     const dispatch = useDispatch();   
     const [getData, setGetData] = useState({ isLoading : false, apiData : [], serverError: null});
@@ -14,7 +14,7 @@ export const useFetchQestion = () => {
         setGetData(prev => ({...prev, isLoading : true}));
 
         
-        /** async function fetch backend data */
+        //fetch backend
         (async () => {
             try {
                 const [{ questions, answers }] = await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`, (data) => data)
@@ -24,7 +24,7 @@ export const useFetchQestion = () => {
                     setGetData(prev => ({...prev, isLoading : false}));
                     setGetData(prev => ({...prev, apiData : questions}));
 
-                    /** dispatch an action */
+                    // start action
                     dispatch(Action.startExamAction({ question : questions, answers }))
 
                 } else{
@@ -41,19 +41,19 @@ export const useFetchQestion = () => {
 }
 
 
-/** MoveAction Dispatch function */
+
 export const MoveNextQuestion = () => async (dispatch) => {
     try {
-        dispatch(Action.moveNextAction()); /** increase trace by 1 */
+        dispatch(Action.moveNextAction()); 
     } catch (error) {
         console.log(error)
     }
 }
 
-/** PrevAction Dispatch function */
+
 export const MovePrevQuestion = () => async (dispatch) => {
     try {
-        dispatch(Action.movePrevAction()); /** decrease trace by 1 */
+        dispatch(Action.movePrevAction()); 
     } catch (error) {
         console.log(error)
     }

@@ -24,7 +24,7 @@ export default function Result() {
     const flag = flagResult(totalPoints, earnPoints)
 
 
-    /** store user result */
+    //store result
     usePublishResult({ 
         result, 
         username : userId,

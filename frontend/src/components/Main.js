@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { setUserId, setUserPass } from '../redux/result_reducer'
 import '../styles/Main.css'
 
+
+
 export default function Main() {
 
     //creating pass and id ref

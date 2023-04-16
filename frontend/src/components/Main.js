@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setUserId, setUserPass } from '../redux/result_reducer'
 import '../styles/Main.css'
-import { Form, FormControl, Button } from 'react-bootstrap';
+
 
 export default function Main() {
 

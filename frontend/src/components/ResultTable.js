@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getServerData } from '../helper/helper'
-import Table from 'react-bootstrap/Table';
+
 
 export default function ResultTable() {
 

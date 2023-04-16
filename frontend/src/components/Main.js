@@ -8,7 +8,6 @@ import '../styles/Main.css'
 
 
 
-
 export default function Main() {
 
     //creating pass and id ref

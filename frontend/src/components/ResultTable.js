@@ -5,7 +5,6 @@ import { getServerData } from '../helper/helper'
 
 
 
-
 export default function ResultTable() {
 
     const [data, setData] = useState([])
